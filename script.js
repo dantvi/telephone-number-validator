@@ -24,6 +24,7 @@ function validateInput() {
 
 function clearResults() {
     resultsEl.textContent = '';
+    userInputEl.value = '';
 }
 
 checkBtn.addEventListener('click', validateInput);
