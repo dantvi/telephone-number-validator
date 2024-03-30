@@ -1,5 +1,5 @@
 const userInputEl = document.getElementById('user-input');
-const resultEl = document.getElementById('results-div');
+const resultsEl = document.getElementById('results-div');
 const checkBtn = document.getElementById('check-btn');
 const clearBtn = document.getElementById('clear-btn');
 
@@ -11,7 +11,7 @@ function validateInput() {
 }
 
 function clearResults() {
-    console.log('clear');
+    resultsEl.textContent = '';
 }
 
 checkBtn.addEventListener('click', validateInput);
