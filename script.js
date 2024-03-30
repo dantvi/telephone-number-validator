@@ -7,9 +7,9 @@ let inputValue = '';
 function validatePhoneNumber(phoneNumber) {
     let regex = /^1?\s?(\d{3}|\(\d{3}\))-?\s?\d{3}-?\s?\d{4}$/gm;
     if (regex.test(phoneNumber)) {
-        return true;
+        resultsEl.textContent = `Valid US number: ${phoneNumber}`;
     } else {
-        return false;
+        resultsEl.textContent = `Invalid US number: ${phoneNumber}`;
     }
   }
 
@@ -18,7 +18,8 @@ function validateInput() {
     if (inputValue === '') {
         alert('Please provide a phone number');
     }
-    console.log(validatePhoneNumber(inputValue));
+    validatePhoneNumber(inputValue);
+    userInputEl.value = '';
 }
 
 function clearResults() {
